@@ -1,4 +1,4 @@
-name: 编译OPPO/Realme-安卓12-通用mt6853机型内核
+seename: 编译OPPO/Realme-安卓12-通用mt6853机型内核
             支持ksu docker lxc kvm Kali-Nethunter
 
 on:
@@ -56,7 +56,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         rm -rf KernelSU
-        curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s main
+        curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s builtin
 
                
     - name: 设置ccache缓存
