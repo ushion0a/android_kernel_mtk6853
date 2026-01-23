@@ -57,20 +57,20 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         rm -rf KernelSU
-        curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s susfs-rksu-master
+        curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s main
 
 
-    - name: 修补susfs
-      run: |
-       cd $GITHUB_WORKSPACE/kernel_workspace/susfs4ksu
-       cp ./kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch $GITHUB_WORKSPACE/kernel_workspace/android-kernel/KernelSU
-       cp ./kernel_patches/50_add_susfs_in_kernel-4.14.patch $GITHUB_WORKSPACE/kernel_workspace/android-kernel/
-       cp ./kernel_patches/fs/* $GITHUB_WORKSPACE/kernel_workspace/android-kernel/fs/
-       cp ./kernel_patches/include/linux/* $GITHUB_WORKSPACE/kernel_workspace/android-kernel/include/linux/
-       cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel/KernelSU 
-       patch -p1 < 10_enable_susfs_for_ksu.patch
-       cd ..
-       patch -p1 < 50_add_susfs_in_kernel.patch
+#    - name: 修补susfs
+#      run: |
+#       cd $GITHUB_WORKSPACE/kernel_workspace/susfs4ksu
+#       cp ./kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch $GITHUB_WORKSPACE/kernel_workspace/android-kernel/KernelSU
+#       cp ./kernel_patches/50_add_susfs_in_kernel-4.14.patch $GITHUB_WORKSPACE/kernel_workspace/android-kernel/
+#       cp ./kernel_patches/fs/* $GITHUB_WORKSPACE/kernel_workspace/android-kernel/fs/
+#       cp ./kernel_patches/include/linux/* $GITHUB_WORKSPACE/kernel_workspace/android-kernel/include/linux/
+#       cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel/KernelSU 
+#       patch -p1 < 10_enable_susfs_for_ksu.patch
+#       cd ..
+#       patch -p1 < 50_add_susfs_in_kernel.patch
 
     
                
