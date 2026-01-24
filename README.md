@@ -1,6 +1,7 @@
 # android_kernel_OPPO/Realme_mtk6853
 OPPO/Realme通用内核
 
+已集成https://github.com/rsuntk/KernelsU
 
 *适用:*
 
