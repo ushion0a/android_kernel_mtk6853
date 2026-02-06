@@ -47,7 +47,7 @@ jobs:
     - name: 下载内核源码
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://github.com/ushion0a/android_kernel_mtk6853 android-kernel
+        git clone https://github.com/ushion0a/android_kernel_mtk6853 -b 安卓12_backslashxx_KSU android-kernel
 #        git clone https://gitlab.com/simonpunk/susfs4ksu.git -b kernel-4.14 susfs4ksu
 #        cd android-kernel
 
